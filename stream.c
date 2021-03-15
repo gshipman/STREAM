@@ -161,6 +161,13 @@
  *
  * Thanks!
  *
+ * If you consider the stream benchmark, you can tally up the reads and writes per test, per element:
+ * test    writes    reads (including RFO)
+ * copy      1         2
+ * scale     1         2
+ * add       1         3
+ * triad     1         3 
+ * 
  *-----------------------------------------------------------------------*/
 
 # define HLINE "-------------------------------------------------------------\n"
