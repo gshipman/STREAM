@@ -242,6 +242,12 @@ main()
     printf("Each kernel will be executed %d times.\n", NTIMES);
     printf(" The *best* time for each kernel (excluding the first iteration)\n"); 
     printf(" will be used to compute the reported bandwidth.\n");
+	printf("total data transferred: \n"); 
+	printf("Copy: %.f MiB \n", (3.0 * BytesPerWord) * ( (double) STREAM_ARRAY_SIZE / 1024.0/1024.));
+	printf("Scale: %.f MiB \n", (3.0 * BytesPerWord) * ( (double) STREAM_ARRAY_SIZE / 1024.0/1024.));
+	printf("Add: %.f MiB \n", (4.0 * BytesPerWord) * ( (double) STREAM_ARRAY_SIZE / 1024.0/1024.));
+	printf("Triad: %.f MiB \n", (4.0 * BytesPerWord) * ( (double) STREAM_ARRAY_SIZE / 1024.0/1024.));
+	printf("Total: %.f MiB \n", (14.0 * BytesPerWord) * ( (double) STREAM_ARRAY_SIZE / 1024.0/1024.));
 
 #ifdef _OPENMP
     printf(HLINE);
